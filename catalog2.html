@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="location">Минск</div>
+            <nav class="nav-menu">
+                <a href="catalog.html">Главная</a>
+                <a href="catalog2.html">Каталог</a>
+                <a href="index.html">Акции</a> <!-- Ссылка на страницу акций -->
+                <a href="#">Магазины</a>
+                <a href="#">Скидки до -50%</a>
+            </nav>
+            <div class="ser">
+                <!-- Кнопка поиска -->
+                <button class="search-btn" onclick="openSearch()">
+                    <img src="ser.png" alt="Поиск" class="ser-ge">
+                </button>
+                <span>❤️</span>
+                <span>🛒</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- Sidebar with Categories -->
+        <section class="catalog-sidebar">
+            <ul>
+                <li><a href="#">Наша коллекция</a></li>
+                <li><a href="#">Азия</a></li>
+                <li class="has-submenu"><a href="#">Макияж</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Лицо</a></li>
+                        <li><a href="#">Глаза</a></li>
+                        <li><a href="#">Губы</a></li>
+                        <li><a href="#">Брови</a></li>
+                        <li><a href="#">Ногти</a></li>
+                        <li><a href="#">Кисти и спонжи</a></li>
+                        <li><a href="#">Палетки</a></li>
+                        <li><a href="#">Детям</a></li>
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Наборы</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Уход</a></li>
+                <li><a href="#">Волосы</a></li>
+                <li><a href="#">Парфюмерия</a></li>
+                <li><a href="#">Аптечная косметика</a></li>
+            </ul>
+        </section>
+    
+       <!-- Баннер на странице каталога с текстом слева -->
+<section class="catalog-banner">
+    <div class="banner-text">
+        <h1>Скидки до 50%</h1>
+        <p>На неделе красоты тебя ждут тысячи товаров по суперценам</p>
+    </div>
+    <a href="discounts.html">
+        <img src="bcat.jpg" alt="Кибершопинг">
+    </a>
+</section>
+
+        

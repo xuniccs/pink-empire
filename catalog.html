@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="location">Минск</div>
+            <nav class="nav-menu">
+                <a href="catalog.html">Главная</a>
+                <a href="catalog2.html">Каталог</a>
+                <a href="index.html">Акции</a> <!-- Ссылка на страницу акций -->
+                <a href="#">Магазины</a>
+                <a href="#">Скидки до -50%</a>
+            </nav>
+            <div class="ser">
+                <!-- Кнопка поиска -->
+                <button class="search-btn" onclick="openSearch()">
+                    <img src="ser.png" alt="Поиск" class="ser-ge">
+                </button>
+                <span>❤️</span>
+                <span>🛒</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Секция поиска (скрытая по умолчанию) -->
+    <div id="searchBox" style="display: none;">
+        <input type="text" placeholder="Введите запрос для поиска...">
+        <button onclick="closeSearch()">Закрыть</button>
+    </div>
+
+    <!-- Main Banner -->
+    <section class="r">
+        <img src="r.png" alt="r" class="r-ge">
+    </section>
+
+    <!-- Новинки Section -->
+    <section class="novinki-section">
+        <h2>Новинки</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="ссылка-на-страницу">
+                    <img src="ch.jpg" alt="Новинка" style="width: 100%;">
+                </a>
+              
+                <div class="product-info">
+                    <p>Парфюмерная вода</p>
+                    <h2>CAROLINA HERRERA Good Girl Blush</h2>
+                    <p>от 322,78 BYN</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mos.jpg" alt="Moschino Toy2">
+                <div class="product-info">
+                    <p>Парфюмерная вода</p>
+                    <h2>Moschino Toy2</h2>
+                    <p>от 269,56 BYN</p>
+                </div>
+            </div>
+            <!-- Add more products similarly -->
+        </div>
+    </section>
+
+    <!-- Акции Section -->
+    <section class="actions-section">
+        <h2>Акции</h2>
+        <div class="actions-grid">
+            <img src="act1.png" alt="Акция 1">
+            <img src="act2.jpg" alt="Акция 2">
+        </div>
+    </section>
+
+    <!-- Хиты Section -->
+    <section class="hits-section">
+        <h2>Хиты</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="hit-product-1.jpg" alt="Хит продукта 1">
+                <div class="product-info">
+                    <h2>Продукт Хит 1</h2>
+                    <p>от 100 BYN</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="hit-product-2.jpg" alt="Хит продукта 2">
+                <div class="product-info">
+                    <h2>Продукт Хит 2</h2>
+                    <p>от 150 BYN</p>
+                </div>
+            </div>
+            <!-- Add more hit products similarly -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-contact">
+                <p>+375 29 888 87 19</p>
+            </div>
+            <nav class="footer-menu">
+                <a href="#">О нас</a>
+                <a href="#">Клиентам</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Функция для открытия поиска
+        function openSearch() {
+            document.getElementById('searchBox').style.display = 'block';
+        }
+
+        // Функция для закрытия поиска
+        function closeSearch() {
+            document.getElementById('searchBox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

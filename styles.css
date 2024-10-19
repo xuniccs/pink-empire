@@ -1,0 +1,364 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Добавляем это, чтобы футер оставался внизу */
+}
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    flex: 1; /* Контейнер будет занимать оставшуюся высоту страницы */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.location {
+    font-size: 14px;
+    color: #666;
+}
+
+.nav-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Кнопка поиска без границ */
+.search-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 15px;
+    height: 15px;
+}
+
+.icons span {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.r {
+    width: 100%;
+    margin: 0;
+}
+
+.r img {
+    width: 100%;
+    
+    margin-bottom: 30px;
+    display: block;
+}
+
+.bcat {
+    width: 50%;
+    margin: 0;
+}
+
+.bcat img {
+    width: 50%;
+    height: 50%;
+    display: block;
+}
+
+/* Новинки Section */
+.novinki-section, .actions-section, .hits-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.novinki-section h2, .actions-section h2, .hits-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Акции Section */
+.actions-grid {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.actions-grid img {
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Контейнер для сайдбара и баннера */
+.main-content {
+    display: flex;
+   /* Все элементы выравниваются по верхней линии */
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+.catalog-sidebar {
+    width: 20%; /* Уменьшаем ширину сайдбара */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+    min-height: 500px;
+}
+
+.catalog-sidebar ul {
+    list-style: none;
+}
+
+.catalog-sidebar ul li {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.catalog-sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-sidebar ul li a::after {
+    content: '>';
+    margin-left: 10px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+/* Подкатегории */
+.sub-menu {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+.sub-menu li {
+    padding: 10px;
+}
+
+.sub-menu li a {
+    font-size: 14px;
+    color: #555;
+}
+
+.catalog-content {
+    display: none;
+    position: absolute;
+    top: 60px; /* Позиция относительно навигации */
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.catalog-content ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.catalog-content ul li {
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.has-submenu:hover .sub-menu {
+    display: block; /* Показать подкатегории при наведении */
+}
+
+.has-submenu {
+    position: relative;
+}
+
+
+.catalog-banner {
+    display: flex;
+    justify-content: flex-left; 
+    align-items: center;
+    position: relative;
+    height: 400px;
+    margin-left: 90px; /* Добавляем отступ слева для смещения баннера правее */
+    margin-bottom: 30px;
+}
+
+.catalog-banner a {
+    display: block;
+    width: 80%; /* Ширина баннера */
+    height: 100%;
+    overflow: hidden;
+}
+
+.catalog-banner a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.catalog-banner a:hover img {
+    transform: scale(1.05);
+}
+
+
+.catalog-banner img {
+    width: 60%; /* Ширина изображения составляет половину ширины баннера */
+    height: 100%; /* Изображение занимает всю высоту баннера */
+    object-fit: cover; /* Изображение будет обрезано по размеру, не теряя пропорций */
+}
+
+.banner-text {
+    position: absolute;
+    right: 20px; /* Смещаем текст чуть дальше влево */
+    z-index: 1;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 30%;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Занимаем всю ширину */
+    position: relative;
+    bottom: 0;
+    clear: both; /* Убираем смещение футера */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-menu a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}

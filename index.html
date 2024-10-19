@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="location">Минск</div>
+            <nav class="nav-menu">
+                <a href="#">Каталог</a>
+                <a href="#">Новинки</a>
+                <a href="#">Акции</a>
+                <a href="#">Магазины</a>
+                <a href="#">Скидки до -50%</a>
+            </nav>
+            <div class="icons">
+                <!-- Add icons like search, cart, heart -->
+                <span>🔍</span>
+                <span>❤️</span>
+                <span>🛒</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="banner-image.jpg" alt="Новинки" class="banner-image">
+        <h1 class="banner-text">Новинки</h1>
+    </section>
+
+    <!-- Filter and Sorting Section -->
+    <section class="filters">
+        <div class="filter-options">
+            <span>Фильтры</span>
+            <select name="sort" id="sort">
+                <option value="popularity">По популярности</option>
+                <option value="discount">По размеру скидки</option>
+                <option value="cheap">Сначала дешевле</option>
+                <option value="expensive">Сначала дороже</option>
+            </select>
+        </div>
+        <div class="product-count">1238 продукта</div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="product-grid">
+        <div class="product-card">
+            <img src="byredo-blanche.jpg" alt="Byredo Blanche">
+            <div class="product-info">
+                <p>Парфюмерная вода</p>
+                <h2>Byredo Blanche</h2>
+                <p>от 813,58 BYN</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bioderma.jpg" alt="Bioderma Cicabio">
+            <div class="product-info">
+                <p>Восстанавливающий крем</p>
+                <h2>Bioderma Cicabio</h2>
+                <p>25,02 BYN</p>
+            </div>
+        </div>
+        <!-- Add more product cards as needed -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-contact">
+                <p>+375 29 888 87 19</p>
+            </div>
+            <nav class="footer-menu">
+                <a href="#">О нас</a>
+                <a href="#">Клиентам</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
